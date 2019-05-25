@@ -23,7 +23,7 @@ class ProfilePage extends StatelessWidget {
                       onPressed: () {},
                     ),
                     NavButton(
-                      text: "projects",
+                      text: "work",
                       onPressed: () {},
                     ),
                     NavButton(
@@ -80,7 +80,7 @@ class NavHeader extends StatelessWidget {
                   onPressed: () {},
                 ),
                 NavButton(
-                  text: "projects",
+                  text: "work",
                   onPressed: () {},
                 ),
                 NavButton(
@@ -276,11 +276,6 @@ class SocialInfo extends StatelessWidget {
                 onPressed: () {},
                 color: Colors.blue,
               ),
-              NavButton(
-                text: "Linkedin",
-                onPressed: () {},
-                color: Colors.blue,
-              ),
             ],
           ),
           Text(
@@ -307,11 +302,6 @@ class SocialInfo extends StatelessWidget {
           ),
           NavButton(
             text: "Facebook",
-            onPressed: () {},
-            color: Colors.blue,
-          ),
-          NavButton(
-            text: "Linkedin",
             onPressed: () {},
             color: Colors.blue,
           ),
