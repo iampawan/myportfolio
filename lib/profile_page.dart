@@ -80,7 +80,7 @@ class NavHeader extends StatelessWidget {
                   onPressed: () {},
                 ),
                 NavButton(
-                  text: "work",
+                  text: "projects",
                   onPressed: () {},
                 ),
                 NavButton(
@@ -273,6 +273,11 @@ class SocialInfo extends StatelessWidget {
               ),
               NavButton(
                 text: "Facebook",
+                onPressed: () {},
+                color: Colors.blue,
+              ),
+              NavButton(
+                text: "Linkedin",
                 onPressed: () {},
                 color: Colors.blue,
               ),
