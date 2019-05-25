@@ -37570,7 +37570,7 @@ return new S.lk(new K.Br(u),X.KD(C.G,"GoogleSansRegular",u,C.w,u),!1,u)}}
 K.Br.prototype={
 M:function(a){var u,t,s,r,q,p,o=null,n=F.bc(a,!1).a.a
 if(typeof n!=="number")return n.D()
-if(n<800){n=H.j([K.cV(C.ar,new K.Bs(),"about"),K.cV(C.ar,new K.Bt(),"work"),K.cV(C.ar,new K.Bu(),"contact")],[N.ag])
+if(n<800){n=H.j([K.cV(C.ar,new K.Bs(),"about"),K.cV(C.ar,new K.Bt(),"projects"),K.cV(C.ar,new K.Bu(),"contact")],[N.ag])
 u=n.length
 n=new Z.wj(new B.yR(new G.De(!0,!0,!0,n),C.is,C.k,!1,o,!0,C.eK,!1,o,u,C.bn,o),o)}else n=o
 u=P.ce(0,0,1)
