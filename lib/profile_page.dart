@@ -305,6 +305,11 @@ class SocialInfo extends StatelessWidget {
             onPressed: () {},
             color: Colors.blue,
           ),
+          NavButton(
+            text: "Linkedin",
+            onPressed: () {},
+            color: Colors.blue,
+          ),
           Text(
             "Pawan Kumar ©️2019",
             textAlign: TextAlign.center,
