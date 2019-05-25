@@ -101,7 +101,7 @@ class PKDot extends StatelessWidget {
     return Row(
       children: <Widget>[
         Text(
-          "PK",
+          "PK MTECHVIRAL",
           textScaleFactor: 2,
           style: TextStyle(
             fontWeight: FontWeight.bold,
