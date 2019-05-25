@@ -23,7 +23,7 @@ class ProfilePage extends StatelessWidget {
                       onPressed: () {},
                     ),
                     NavButton(
-                      text: "work",
+                      text: "projects",
                       onPressed: () {},
                     ),
                     NavButton(
