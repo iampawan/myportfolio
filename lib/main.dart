@@ -1,7 +1,7 @@
 import 'package:flutter_web/material.dart';
 import 'package:myportfolio/profile_page.dart';
 
-main() async {
+main() {
   runApp(MyApp());
 }
 

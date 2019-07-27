@@ -1,8 +1,31 @@
+import 'dart:html' as html;
+
 import 'package:flutter_web/material.dart';
 import 'package:myportfolio/responsive_widget.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key key}) : super(key: key);
+
+  List<Widget> navButtons() => [
+        NavButton(
+          text: "about",
+          onPressed: () {
+            html.window.open("https://pawan.live", "Pk");
+          },
+        ),
+        NavButton(
+          text: "work",
+          onPressed: () {
+            html.window.open("https://pawan.live", "Pk");
+          },
+        ),
+        NavButton(
+          text: "contact",
+          onPressed: () {
+            html.window.open("https://pawan.live", "Pk");
+          },
+        ),
+      ];
 
   @override
   Widget build(BuildContext context) {
@@ -17,20 +40,7 @@ class ProfilePage extends StatelessWidget {
             ? Drawer(
                 child: ListView(
                   padding: const EdgeInsets.all(20),
-                  children: <Widget>[
-                    NavButton(
-                      text: "about",
-                      onPressed: () {},
-                    ),
-                    NavButton(
-                      text: "work",
-                      onPressed: () {},
-                    ),
-                    NavButton(
-                      text: "contact",
-                      onPressed: () {},
-                    ),
-                  ],
+                  children: navButtons(),
                 ),
               )
             : null,
@@ -42,7 +52,7 @@ class ProfilePage extends StatelessWidget {
               largeScreen: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  NavHeader(),
+                  NavHeader(navButtons: navButtons()),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.1,
                   ),
@@ -62,6 +72,10 @@ class ProfilePage extends StatelessWidget {
 }
 
 class NavHeader extends StatelessWidget {
+  final List<Widget> navButtons;
+
+  const NavHeader({Key key, this.navButtons}) : super(key: key);
+
   Widget build(BuildContext context) {
     return ResponsiveWidget(
       largeScreen: Row(
@@ -74,20 +88,7 @@ class NavHeader extends StatelessWidget {
 //          Spacer(),
           if (!ResponsiveWidget.isSmallScreen(context))
             Row(
-              children: <Widget>[
-                NavButton(
-                  text: "about",
-                  onPressed: () {},
-                ),
-                NavButton(
-                  text: "work",
-                  onPressed: () {},
-                ),
-                NavButton(
-                  text: "contact",
-                  onPressed: () {},
-                ),
-              ],
+              children: navButtons,
             )
         ],
       ),
@@ -207,7 +208,11 @@ class ProfileInfo extends StatelessWidget {
             shape: StadiumBorder(),
             child: Text("Resume"),
             color: Colors.red,
-            onPressed: () {},
+            onPressed: () {
+              html.window.open(
+                  "https://google-developers.appspot.com/community/experts/directory/profile/profile-pawan_kumar",
+                  "GDE");
+            },
             padding: EdgeInsets.all(10),
           ),
           SizedBox(
@@ -220,7 +225,9 @@ class ProfileInfo extends StatelessWidget {
             shape: StadiumBorder(),
             child: Text("Say Hi!"),
             color: Colors.red,
-            onPressed: () {},
+            onPressed: () {
+              html.window.open("https://pawan.live", "Pk");
+            },
             padding: EdgeInsets.all(10),
           )
         ],
@@ -252,6 +259,40 @@ class ProfileInfo extends StatelessWidget {
 }
 
 class SocialInfo extends StatelessWidget {
+  List<Widget> socialMediaWidgets() {
+    return [
+      NavButton(
+        text: "Github",
+        onPressed: () {
+          html.window.open("https://github.com/iampawan", "Git");
+        },
+        color: Colors.blue,
+      ),
+      NavButton(
+        text: "Twitter",
+        onPressed: () {
+          html.window.open("https://twitter.com/imthepk", "Twitter");
+        },
+        color: Colors.blue,
+      ),
+      NavButton(
+        text: "Facebook",
+        onPressed: () {
+          html.window.open("https://facebook.com/thepawankumaar", "Fb");
+        },
+        color: Colors.blue,
+      ),
+    ];
+  }
+
+  Widget copyRightText() => Text(
+        "Pawan Kumar ©️2019",
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          color: Colors.grey,
+        ),
+      );
+
   @override
   Widget build(BuildContext context) {
     return ResponsiveWidget(
@@ -260,58 +301,16 @@ class SocialInfo extends StatelessWidget {
         children: <Widget>[
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              NavButton(
-                text: "Github",
-                onPressed: () {},
-                color: Colors.blue,
-              ),
-              NavButton(
-                text: "Twitter",
-                onPressed: () {},
-                color: Colors.blue,
-              ),
-              NavButton(
-                text: "Facebook",
-                onPressed: () {},
-                color: Colors.blue,
-              ),
-            ],
+            children: socialMediaWidgets(),
           ),
-          Text(
-            "Pawan Kumar ©️2019",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.grey,
-            ),
-          ),
+          copyRightText(),
         ],
       ),
       smallScreen: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          NavButton(
-            text: "Github",
-            onPressed: () {},
-            color: Colors.blue,
-          ),
-          NavButton(
-            text: "Twitter",
-            onPressed: () {},
-            color: Colors.blue,
-          ),
-          NavButton(
-            text: "Facebook",
-            onPressed: () {},
-            color: Colors.blue,
-          ),
-          Text(
-            "Pawan Kumar ©️2019",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.grey,
-            ),
-          ),
+          ...socialMediaWidgets(),
+          copyRightText(),
         ],
       ),
     );
