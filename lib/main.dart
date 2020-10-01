@@ -13,9 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        brightness: Brightness.dark,
-        primaryColorDark: Colors.black,
-        fontFamily: "GoogleSansRegular",
+        brightness: Brightness.dark, //For dark theme 
+        primaryColorDark: Colors.black, //Color choosed black
+        fontFamily: "GoogleSansRegular", //font used 
       ),
       home: ProfilePage(),
     );
